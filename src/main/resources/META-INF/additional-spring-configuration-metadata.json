@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "io.openfuture.sdk.property.OpenProperties",
+      "name": "open",
+      "type": "io.openfuture.sdk.property.OpenProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "io.openfuture.sdk.property.OpenProperties",
+      "name": "open.token",
+      "type": "java.lang.String"
+    }
+  ]
+}

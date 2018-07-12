@@ -1,0 +1,55 @@
+plugins {
+    id "idea"
+    id "org.jetbrains.kotlin.jvm" version "1.2.41"
+    id "org.jetbrains.kotlin.kapt" version "1.2.41"
+    id "org.jetbrains.kotlin.plugin.spring" version "1.2.41"
+    id "org.springframework.boot" version "2.0.2.RELEASE"
+    id "maven"
+}
+
+apply plugin: "io.spring.dependency-management"
+
+group = "io.openfuture"
+version = "1.0.0"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    // Sdk
+    compile("io.openfuture:sdk:1.0.0")
+
+    // Spring
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-amqp")
+    compile("org.springframework.boot:spring-boot-configuration-processor")
+
+    // Kotlin
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compile("org.jetbrains.kotlin:kotlin-reflect")
+
+    // Tools
+    compile("javax.validation:validation-api:2.0.1.Final")
+
+    // Test
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+compileKotlin {
+    kotlinOptions {
+        freeCompilerArgs = ["-Xjsr305=strict"]
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        freeCompilerArgs = ["-Xjsr305=strict"]
+        jvmTarget = "1.8"
+    }
+}
+
+bootJar { enabled = false }
+jar { enabled = true }
