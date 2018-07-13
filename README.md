@@ -6,7 +6,15 @@ OpenJ starter is a library for easy integration Open SDK and Spring Boot applica
 
 Using gradle:
 
+compile("io.openfuture:spring-boot-starter-sdk:1.0.0")
+
 Using maven:
+
+<dependency>
+    <groupId>io.openfuture</groupId>
+    <artifactId>spring-boot-starter-sdk</artifactId>
+    <version>1.0.0</version>
+</dependency>
 
 ## Get started
 
