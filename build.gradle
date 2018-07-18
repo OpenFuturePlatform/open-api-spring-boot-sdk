@@ -116,3 +116,8 @@ uploadArchives {
         }
     }
 }
+
+nexusStaging {
+    numberOfRetries = 40
+    delayBetweenRetriesInMillis = 8000
+}
