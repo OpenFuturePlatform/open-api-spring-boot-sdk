@@ -1,6 +1,5 @@
 package io.openfuture.sdk
 
-import io.openfuture.api.OpenJ
 import io.openfuture.sdk.property.OpenProperties
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass
 import org.springframework.boot.context.properties.EnableConfigurationProperties
