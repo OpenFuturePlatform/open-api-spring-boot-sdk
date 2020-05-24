@@ -1,8 +1,8 @@
 plugins {
     id "idea"
-    id "org.jetbrains.kotlin.jvm" version "1.2.41"
-    id "org.jetbrains.kotlin.kapt" version "1.2.41"
-    id "org.jetbrains.kotlin.plugin.spring" version "1.2.41"
+    id "org.jetbrains.kotlin.jvm" version "1.3.72"
+    id "org.jetbrains.kotlin.kapt" version "1.3.72"
+    id "org.jetbrains.kotlin.plugin.spring" version "1.3.72"
     id "org.springframework.boot" version "2.0.2.RELEASE"
     id "io.codearte.nexus-staging" version "0.11.0"
     id "maven"
@@ -13,7 +13,7 @@ apply plugin: "io.spring.dependency-management"
 
 group = "io.openfuture"
 version = '${VERSION}'
-sourceCompatibility = 1.8
+sourceCompatibility = 12
 
 repositories {
     mavenCentral()
@@ -42,13 +42,13 @@ dependencies {
 compileKotlin {
     kotlinOptions {
         freeCompilerArgs = ["-Xjsr305=strict"]
-        jvmTarget = "1.8"
+        jvmTarget = "12"
     }
 }
 compileTestKotlin {
     kotlinOptions {
         freeCompilerArgs = ["-Xjsr305=strict"]
-        jvmTarget = "1.8"
+        jvmTarget = "12"
     }
 }
 
